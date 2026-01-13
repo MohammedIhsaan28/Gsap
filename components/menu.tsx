@@ -129,8 +129,8 @@ export default function Menu() {
               key={cocktail.id}
               className={
                 isActive
-                  ? "text-white border-white"
-                  : "text-white/50 border-white/50"
+                  ? "text-amber-300 border-amber-200"
+                  : "text-white/50 border-white/50 hover:text-amber-300/60 hover:border-amber-300/90"
               }
               onClick={() => {
                 goToSlide(index);
@@ -190,11 +190,11 @@ export default function Menu() {
         <div className="recipe ml-8">
           <div ref={contentRef} className="info m-8">
             <p className="italic">Recipe for:</p>
-            <p id="title">{currentCocktail.name}</p>
+            <p id="title" className="text-amber-300">{currentCocktail.name}</p>
           </div>
 
           <div className="details mr-8">
-            <h2 className="border-b border-amber-100 p-2 ">
+            <h2 className="border-b border-amber-100 p-2 text-amber-300">
               {currentCocktail.title}
             </h2>
             <p className="italic text-gray-300">
