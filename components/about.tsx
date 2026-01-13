@@ -34,7 +34,7 @@ export default function AboutPage(){
             yPercent: 100,
             ease: 'expo.out',
             stagger: 0.02,
-        },'-=0.5')
+        },'-=0.8')
         .from('.top-grid div , .bottom-grid div',{
             opacity:0,
             yPercent: 20,

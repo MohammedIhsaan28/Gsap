@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
 import Cocktails from "@/components/cocktails";
 import AboutPage from "@/components/about";
+import Art from "@/components/art";
 
 gsap.registerPlugin(ScrollTrigger,SplitText);
 
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero/>
       <Cocktails/>
       <AboutPage/>
+      <Art/>
     </main>
   );
 }
