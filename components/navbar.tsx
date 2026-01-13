@@ -28,14 +28,14 @@ export default function Navbar() {
         <nav>
             <div>
                 <Link href={'/'} className="flex items-center gap-2">
-                    <Image src={'/images/logo.png'} alt='Velvet Logo' width={40} height={40}/>
+                    <Image src={'/images/logo.png'} alt='Velvet Logo' className="ml-4" width={40} height={40}/>
                     <p>Velvet Pour</p>
                 </Link>
 
-                <ul>
+                <ul className="mr-4 italic">
                     {navLinks.map((link) => (
                         <li key={link.id}>
-                            <Link href={`/#${link.id}`}>{link.title}</Link>
+                            <Link className="hover:text-amber-100 " href={`/#${link.id}`}>{link.title}</Link>
 
                         </li>
                     ))}
