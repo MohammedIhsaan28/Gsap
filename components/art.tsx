@@ -31,7 +31,7 @@ export default function Art(){
             scale: 1.3,
             maskPosition: 'center',
             maskSize: '400%',
-            duration:3,
+            duration:1,
             ease:'power1.inOut',
             
         })

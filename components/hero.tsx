@@ -105,9 +105,9 @@ export default function Hero() {
 
             <div className="view-cocktails">
               <p className="subtitle font-modern-negra text-xl text-amber-100">
-                Every cocktail on our menu is blend of premium ingredients,
+                Every cocktail on our menu is blend of premium ingredients
                 creative flair and timeless recipes - designed to delight your
-                senses.{" "}
+                senses{" "}
               </p>
               <Link href="#cocktails" className="text-gray-400 font-bold italic">View Cocktails</Link>
             </div>

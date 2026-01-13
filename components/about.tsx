@@ -56,7 +56,7 @@ export default function AboutPage(){
 
                     <div className="sub-content">
                         <p className="font-modern-negra text-xl">
-                            Every cocktail we serve is a reflection of our obsession with detail from the first muddle to the final garnish. That care is what turns a simple drink into something truly memorable
+                            Every cocktail we serve is a reflection of our obsession with detail from the first muddle to the final garnish  That care is what turns a simple drink into something truly memorable
                         </p>
                         <div>
                             <p className="md:text-3xl text-xl font-bold">
