@@ -1,3 +1,5 @@
+'use client';
+
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { SplitText} from "gsap/all";
@@ -8,7 +10,7 @@ import { useMediaQuery } from "react-responsive";
 
 
 export default function Hero() {
-  const videoRef = useRef();
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   useGSAP(() => {
@@ -62,12 +64,15 @@ export default function Hero() {
         },
     });
     
-
-    videoRef.current.onloadedmetadata = () => {
+    if(videoRef.current){
+      videoRef.current.onloadedmetadata = () => {
+        
+        if(!videoRef.current) return;
         tl.to(videoRef.current, {
             currentTime: videoRef.current.duration,
         });
     };
+    }
 
   }, []);
   return (
@@ -77,34 +82,34 @@ export default function Hero() {
         <Image
           src={"/images/hero-left-leaf.png"}
           alt="left-leaf"
-          width={500}
-          height={500}
+          width={800}
+          height={800}
           className="left-leaf"
         />
         <Image
           src={"/images/hero-right-leaf.png"}
           alt="right-leaf"
-          width={500}
-          height={500}
+          width={800}
+          height={800}
           className="right-leaf"
         />
 
         <div className="body">
           <div className="content">
             <div className="space-y-5 hidden md:block">
-              <p>Cool. Crisp. Classic.</p>
+              <p className="font-modern-negra text-2xl">Cool Crisp Classic</p>
               <p className="subtitle">
                 Sip the Spirit <br /> of Summer
               </p>
             </div>
 
             <div className="view-cocktails">
-              <p className="subtitle">
+              <p className="subtitle font-modern-negra text-xl text-amber-100">
                 Every cocktail on our menu is blend of premium ingredients,
                 creative flair and timeless recipes - designed to delight your
                 senses.{" "}
               </p>
-              <Link href="#cocktails">View Cocktails</Link>
+              <Link href="#cocktails" className="text-gray-400 font-bold italic">View Cocktails</Link>
             </div>
           </div>
         </div>

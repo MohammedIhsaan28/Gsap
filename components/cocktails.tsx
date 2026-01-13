@@ -26,12 +26,12 @@ export default function Cocktails(){
 
     return(
         <section id="cocktails" className="noisy">
-            <Image src={'/images/cocktail-left-leaf.png'} width={500} height={500} alt='left-leaf' id='c-left-leaf'/>
-            <Image src={'/images/cocktail-right-leaf.png'} width={500} height={500} alt='right-leaf' id='c-right-leaf'/>
+            <Image src={'/images/cocktail-left-leaf.png'} width={800} height={800} alt='left-leaf' id='c-left-leaf'/>
+            <Image src={'/images/cocktail-right-leaf.png'} width={800} height={800} alt='right-leaf' id='c-right-leaf'/>
 
             <div className="list">
                 <div className="popular ml-4">
-                    <h2>Most popular cocktails:</h2>
+                    <h2 className="italic font-semibold">Most popular cocktails:</h2>
 
                     <ul >
                         {cocktailLists.map(({name,country,price,detail})=> (
@@ -41,20 +41,19 @@ export default function Cocktails(){
                                     <p>{country} | {detail}</p>
                                 </div>
 
-                                <span>- {price}</span>
+                                <span className="mr-4">- {price}</span>
 
                             </li>
                         ))}
                     </ul>
-
                 </div>
 
                 <div className="loved mr-4">
-                    <h2>Most loved mocktails:</h2>
+                    <h2 className="italic font-semibold ml-4">Most loved mocktails:</h2>
                     <ul>
                         {mockTailLists.map(({name,country,price,detail})=> (
                             <li key={name}>
-                                <div className="me-28">
+                                <div className="me-28 ml-4">
                                     <h3>{name}</h3>
                                     <p>{country} | {detail}</p>
                                 </div>
@@ -64,7 +63,6 @@ export default function Cocktails(){
                             </li>
                         ))}
                     </ul>
-
                 </div>
 
             </div>

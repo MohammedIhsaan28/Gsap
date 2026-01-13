@@ -35,7 +35,7 @@ export default function Navbar() {
                 <ul>
                     {navLinks.map((link) => (
                         <li key={link.id}>
-                            <Link href={`/${link.id}`}>{link.title}</Link>
+                            <Link href={`/#${link.id}`}>{link.title}</Link>
 
                         </li>
                     ))}
